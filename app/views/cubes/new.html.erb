@@ -1,0 +1,12 @@
+<h1>Create new cube</h1>
+
+<%= form_for @cube do |f| %>
+
+<p>Size:<br/><%= f.text_field :size %> cm</p>
+<p>Color:<br/><%= f.text_field :color %></p>
+<p>Weight:<br/><%= f.text_field :weight %> kg</p>
+<p>Material:<br/><%= f.text_field :material %></p>
+
+<p><%= f.submit "Create qube" %></p>
+
+<% end %>

@@ -1,0 +1,27 @@
+<h1>Cubes<h1>
+<% if @cubes.empty? %>
+  <b>NO cubes</b>
+<% else %>
+  <table border="">
+    <tr>
+      <th>cube id</th>
+      <th>size</th>
+      <th>color</th>
+      <th>weight</th>
+      <th>material</th>
+      <th></th>
+    </tr>
+
+  <% @cubes.each do |i| %>
+    <tr>
+      <td><%= i.id %></td>
+      <td><%= i.size %></td>
+      <td><%= i.color %></td>
+      <td><%= i.weight %></td>
+      <td><%= i.material %></td>
+      <td><%= link_to "Удалить", i, method: :delete, data: 
+        {confirm: "Точно удалить"} %></td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>
